@@ -7,17 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="464" Width="800" Loaded="Window_Loaded" ResizeMode="NoResize">
     <Grid>
-        <ListBox x:Name="MessageBox" HorizontalAlignment="Left" Height="377" Margin="10,10,0,0" VerticalAlignment="Top" Width="327"/>
+        <ListBox x:Name="MessageBox" HorizontalAlignment="Left" Height="415" Margin="10,10,0,0" VerticalAlignment="Top" Width="327"/>
         <Button x:Name="RefreshCMD" Content="Refresh Connection" HorizontalAlignment="Left" Margin="657,60,0,0" VerticalAlignment="Top" Width="125" Click="Refresh_Click"/>
         <Button x:Name="LoadTreeCMD" Content="Load Tree" HorizontalAlignment="Left" Margin="657,10,0,0" VerticalAlignment="Top" Width="125" Click="LoadTreeCMD_Click"/>
         <Button x:Name="SaveTreeCMD" Content="Save Tree" HorizontalAlignment="Left" Margin="657,35,0,0" VerticalAlignment="Top" Width="125"/>
-        <Label x:Name="ConnectionStatus" Content="" HorizontalAlignment="Left" Margin="10,399,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.184,-0.611" Width="400"/>
         <Button x:Name="PingCMD" Content="Ping" HorizontalAlignment="Left" Margin="342,10,0,0" VerticalAlignment="Top" Width="149" Click="PingCMD_Click"/>
         <Button x:Name="SendCMD" Content="Send" HorizontalAlignment="Left" Margin="342,35,0,0" VerticalAlignment="Top" Width="149" Click="SendCMD_Click"/>
         <TextBox x:Name="MessageTXT" HorizontalAlignment="Left" Height="23" Margin="342,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149"/>
         <Button x:Name="EchoCMD" Content="Echo" HorizontalAlignment="Left" Margin="633,405,0,0" VerticalAlignment="Top" Width="149" Click="EchoCMD_Click"/>
         <ListBox x:Name="TreeList" HorizontalAlignment="Left" Height="302" Margin="342,85,0,0" VerticalAlignment="Top" Width="440"/>
         <Button x:Name="SendTreeCMD" Content="Send Tree" HorizontalAlignment="Left" Margin="496,35,0,0" VerticalAlignment="Top" Width="149" Click="SendTreeCMD_Click"/>
+        <Button x:Name="AddCMD" Content="Add" HorizontalAlignment="Left" Margin="342,405,0,0" VerticalAlignment="Top" Width="75" Click="AddCMD_Click"/>
+        <Button x:Name="DeleteCMD" Content="Delete" HorizontalAlignment="Left" Margin="422,405,0,0" VerticalAlignment="Top" Width="75" Click="DeleteCMD_Click"/>
 
     </Grid>
 </Window>

@@ -36,10 +36,32 @@ namespace TreeWebInterface
 
         }
 
+        public void AddNode(string Node)
+        {
+
+            Clients.All.SendAsync("AddNode", Node);
+
+        }
+
+        public void DeleteNode(string Node)
+        {
+
+            Clients.All.SendAsync("Delete", Node);
+
+        }
+
         public void Echo(string name, string message)
         {
             Clients.Client(Context.ConnectionId).SendAsync("Echo", name, message + " (echo from server)");
         }
+
+        public override Task OnConnectedAsync()
+        {
+
+            return base.OnConnectedAsync();
+        }
+
+
 
     }
 

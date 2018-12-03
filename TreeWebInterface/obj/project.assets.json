@@ -11634,11 +11634,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\musha\\source\\repos\\TreeWebInterface\\TreeWebInterface\\TreeWebInterface.csproj",
+      "projectUniqueName": "C:\\Users\\musha\\source\\repos\\TreeWebInterface\\CRNTreeInterface\\TreeWebInterface\\TreeWebInterface.csproj",
       "projectName": "TreeWebInterface",
-      "projectPath": "C:\\Users\\musha\\source\\repos\\TreeWebInterface\\TreeWebInterface\\TreeWebInterface.csproj",
+      "projectPath": "C:\\Users\\musha\\source\\repos\\TreeWebInterface\\CRNTreeInterface\\TreeWebInterface\\TreeWebInterface.csproj",
       "packagesPath": "C:\\Users\\musha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\musha\\source\\repos\\TreeWebInterface\\TreeWebInterface\\obj\\",
+      "outputPath": "C:\\Users\\musha\\source\\repos\\TreeWebInterface\\CRNTreeInterface\\TreeWebInterface\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -86,14 +86,17 @@ namespace TreeWPFInterface
                 
             }
 
-            CRNConnection.On<string, string>("BroadcastMessage", (user, message) =>
+            CRNConnection.On<string>("AddNode", (Node) =>
             {
-                this.Dispatcher.Invoke(() =>
-                {
-                    var newMessage = $"{user}: {message}";
-                    MessageBox.Items.Add(newMessage);
 
-                });
+                TreeList.Items.Add(Node);
+
+            });
+
+            CRNConnection.On<string>("DeleteNode", (Node) =>
+            {
+
+                TreeList.Items.Remove(Node);
 
             });
 
@@ -263,6 +266,43 @@ namespace TreeWPFInterface
             }
   
         }
+
+        private async void AddCMD_Click(object sender, RoutedEventArgs e)
+        {
+
+            try
+            {
+
+                await CRNConnection.InvokeAsync("AddNode", TreeList.SelectedItem.ToString());
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Items.Add("ADD FAILED: " + ex.Message);
+
+            }
+
+        }
+
+        private async void DeleteCMD_Click(object sender, RoutedEventArgs e)
+        {
+
+            try
+            {
+
+                await CRNConnection.InvokeAsync("DeleteNode", TreeList.SelectedItem.ToString());
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Items.Add("DELETE FAILED: " + ex.Message);
+
+            }
+
+        }
+
 
     }
 }
