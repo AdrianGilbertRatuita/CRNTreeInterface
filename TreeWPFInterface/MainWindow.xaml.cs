@@ -88,15 +88,39 @@ namespace TreeWPFInterface
 
             CRNConnection.On<string>("AddNode", (Node) =>
             {
+                try
+                {
+                    bool alreadyExists = false; // if true, the attempted addition already exists.
 
-                TreeList.Items.Add(Node);
+                    for(int i = 0; i < TreeList.Items.Count; i++)
+                    {
+                        if(Node.ToUpper() == TreeList.Items[i].ToString().ToUpper())
+                        {
+                            alreadyExists = true;
+                            break;
+                        }
+                    }
+
+                    if(!alreadyExists)
+                        TreeList.Items.Add(Node);
+                }
+                catch
+                {
+                    // Error?
+                }
 
             });
 
             CRNConnection.On<string>("DeleteNode", (Node) =>
             {
-
-                TreeList.Items.Remove(Node);
+                try
+                {
+                    TreeList.Items.Remove(Node);
+                }
+                catch
+                {
+                    // Node doesn't exist
+                }
 
             });
 
@@ -245,20 +269,51 @@ namespace TreeWPFInterface
 
                 try
                 {
+                    int tDepth;
+                    float spaceDepth;
 
                     string[] LoadedList = System.IO.File.ReadAllLines(OpenDialog.FileName);
 
                     for (int i = 0; i < LoadedList.Length; i++)
                     {
+                        tDepth = 0;
+                        spaceDepth = 0;
+                        for (int j = 0; j < LoadedList[i].Count(); j++)
+                        {
+                            //Console.WriteLine(FileDataStrings[i]);
+                            char[] temp = LoadedList[i].ToCharArray();
+                            if (temp[j] == '\t')
+                            {
+                                tDepth += 1;
+                            }
+                            else if (temp[j] == ' ')
+                            {
+                                spaceDepth += 1;
+                            }
+                            else
+                            {
+                                // THIS String is the actual Loaded Node's name, without the Blank Spaces!
+                                string LoadedListNodeName = LoadedList[i].Substring((tDepth + (int)spaceDepth), (temp.Count() - (tDepth + (int)spaceDepth)));
+                                
 
-                        TreeList.Items.Add(LoadedList[i]);
+                                float tempD = spaceDepth % 8;
+                                spaceDepth -= tempD;
+                                
+                                // This adds the node's depth and name. EX. 2. Steven
+                                TreeList.Items.Add((tDepth + (spaceDepth / 8)) + ". " + LoadedListNodeName);
+
+                                break;
+                            }
+                        } // inner loop. For the characters of the string element
+
+
 
                     }
 
                 }
                 catch (Exception Ex)
                 {
-
+                    // Error loading a Tree list?
 
 
                 }
