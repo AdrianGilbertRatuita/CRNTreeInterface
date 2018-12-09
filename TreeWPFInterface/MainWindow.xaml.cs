@@ -32,7 +32,7 @@ namespace TreeWPFInterface
 
             InitializeComponent();
 
-            CRNConnection = new HubConnectionBuilder().WithUrl("http://localhost:5000/chat").Build();
+            CRNConnection = new HubConnectionBuilder().WithUrl("https://montblanccrntreeinterface.azurewebsites.net/chat").Build();
 
             CRNConnection.Closed += async (error) =>
             {
@@ -86,13 +86,43 @@ namespace TreeWPFInterface
                 
             }
 
-            CRNConnection.On<string>("AddNode", (Node) =>
+            CRNConnection.On<string, string>("AddNode", (Node, AddingNode) =>
             {
                 try
                 {
+                    Node = TreeList.SelectedItem.ToString();
+                    AddingNode = MessageTXT.Text.ToString();
+
                     bool alreadyExists = false; // if true, the attempted addition already exists.
 
-                    for(int i = 0; i < TreeList.Items.Count; i++)
+                    int i;
+
+                    for (i = 0; i < TreeList.Items.Count; i++)
+                    {
+                        if (AddingNode.ToUpper() == TreeList.Items[i].ToString().ToUpper())
+                        {
+                            alreadyExists = true;
+                            break;
+                        }
+                    }
+
+                    if (!alreadyExists)
+                    {
+                        TreeList.Items.Insert(TreeList.SelectedIndex, AddingNode);
+                    }
+                }
+                catch
+                {
+                    MessageBox.Items.Add("Issue adding node");
+                }
+
+                /*try
+                {
+                    bool alreadyExists = false; // if true, the attempted addition already exists.
+
+                    int i;
+
+                    for(i = 0;  i < TreeList.Items.Count; i++)
                     {
                         if(Node.ToUpper() == TreeList.Items[i].ToString().ToUpper())
                         {
@@ -101,13 +131,15 @@ namespace TreeWPFInterface
                         }
                     }
 
-                    if(!alreadyExists)
-                        TreeList.Items.Add(Node);
+                    if (!alreadyExists)
+                    {
+                        TreeList.Items.Insert(i, AddingNode);
+                    }
                 }
                 catch
                 {
                     // Error?
-                }
+                }*/
 
             });
 
@@ -328,8 +360,39 @@ namespace TreeWPFInterface
 
             try
             {
+                // The same as delete, this async invocation doesn't work for me. The try/catch that follows is also in "AddNode".
+                // - Luke
+                //await CRNConnection.InvokeAsync("AddNode", TreeList.SelectedItem.ToString(), Name.ToString());
 
-                await CRNConnection.InvokeAsync("AddNode", TreeList.SelectedItem.ToString());
+                // Works as intended, but is synchronous.
+                // - Luke
+                try
+                {
+                    string Node = TreeList.SelectedItem.ToString();
+                    string AddingNode = MessageTXT.Text.ToString();
+
+                    bool alreadyExists = false; // if true, the attempted addition already exists.
+
+                    int i;
+
+                    for (i = 0; i < TreeList.Items.Count; i++)
+                    {
+                        if (AddingNode.ToUpper() == TreeList.Items[i].ToString().ToUpper())
+                        {
+                            alreadyExists = true;
+                            break;
+                        }
+                    }
+
+                    if (!alreadyExists)
+                    {
+                        TreeList.Items.Insert(TreeList.SelectedIndex, AddingNode);
+                    }
+                }
+                catch
+                {
+                    MessageBox.Items.Add("Issue adding node");
+                }
 
             }
             catch (Exception ex)
@@ -347,7 +410,13 @@ namespace TreeWPFInterface
             try
             {
 
-                await CRNConnection.InvokeAsync("DeleteNode", TreeList.SelectedItem.ToString());
+                // The same as AddNode, this async invocation doesn't act correctly. Not sure why.
+                // - Luke
+                //await CRNConnection.InvokeAsync("DeleteNode", TreeList.SelectedItem.ToString());
+
+                // Works as intended, but synchronous.
+                // - Luke
+                TreeList.Items.Remove(TreeList.SelectedItem.ToString());
 
             }
             catch (Exception ex)
