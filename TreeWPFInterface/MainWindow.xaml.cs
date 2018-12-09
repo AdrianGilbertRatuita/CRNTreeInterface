@@ -298,9 +298,10 @@ namespace TreeWPFInterface
 
                                 float tempD = spaceDepth % 8;
                                 spaceDepth -= tempD;
-                                
+
                                 // This adds the node's depth and name. EX. 2. Steven
                                 TreeList.Items.Add((tDepth + (spaceDepth / 8)) + ". " + LoadedListNodeName);
+                                
 
                                 break;
                             }
