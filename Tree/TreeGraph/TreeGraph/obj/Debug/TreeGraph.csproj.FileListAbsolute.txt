@@ -1,0 +1,7 @@
+D:\COLUMBIA\Algorithms\Algorepo\Tree\TreeGraph\TreeGraph\bin\Debug\TreeGraph.exe.config
+D:\COLUMBIA\Algorithms\Algorepo\Tree\TreeGraph\TreeGraph\bin\Debug\TreeGraph.exe
+D:\COLUMBIA\Algorithms\Algorepo\Tree\TreeGraph\TreeGraph\bin\Debug\TreeGraph.pdb
+D:\COLUMBIA\Algorithms\Algorepo\Tree\TreeGraph\TreeGraph\obj\Debug\TreeGraph.csprojAssemblyReference.cache
+D:\COLUMBIA\Algorithms\Algorepo\Tree\TreeGraph\TreeGraph\obj\Debug\TreeGraph.csproj.CoreCompileInputs.cache
+D:\COLUMBIA\Algorithms\Algorepo\Tree\TreeGraph\TreeGraph\obj\Debug\TreeGraph.exe
+D:\COLUMBIA\Algorithms\Algorepo\Tree\TreeGraph\TreeGraph\obj\Debug\TreeGraph.pdb

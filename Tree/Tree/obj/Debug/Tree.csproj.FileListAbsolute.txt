@@ -1,0 +1,14 @@
+D:\COLUMBIA\Algorithms\Tree\Tree\obj\Debug\Tree.csprojAssemblyReference.cache
+D:\COLUMBIA\Algorithms\Tree\Tree\obj\Debug\Tree.csproj.CoreCompileInputs.cache
+D:\COLUMBIA\Algorithms\Tree\Tree\bin\Debug\Tree.exe.config
+D:\COLUMBIA\Algorithms\Tree\Tree\bin\Debug\Tree.exe
+D:\COLUMBIA\Algorithms\Tree\Tree\bin\Debug\Tree.pdb
+D:\COLUMBIA\Algorithms\Tree\Tree\obj\Debug\Tree.exe
+D:\COLUMBIA\Algorithms\Tree\Tree\obj\Debug\Tree.pdb
+D:\COLUMBIA\Algorithms\Algorepo\Tree\Tree\bin\Debug\Tree.exe.config
+D:\COLUMBIA\Algorithms\Algorepo\Tree\Tree\bin\Debug\Tree.exe
+D:\COLUMBIA\Algorithms\Algorepo\Tree\Tree\bin\Debug\Tree.pdb
+D:\COLUMBIA\Algorithms\Algorepo\Tree\Tree\obj\Debug\Tree.csprojAssemblyReference.cache
+D:\COLUMBIA\Algorithms\Algorepo\Tree\Tree\obj\Debug\Tree.csproj.CoreCompileInputs.cache
+D:\COLUMBIA\Algorithms\Algorepo\Tree\Tree\obj\Debug\Tree.exe
+D:\COLUMBIA\Algorithms\Algorepo\Tree\Tree\obj\Debug\Tree.pdb

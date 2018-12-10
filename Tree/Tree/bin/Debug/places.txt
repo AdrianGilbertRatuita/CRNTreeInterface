@@ -1,0 +1,11 @@
+Earth
+	Eurasia
+	Antartica
+	North America
+	South America
+	Africa
+	Australia
+Mars
+	Olympus Mons
+Jupiter
+	Big Red Spot

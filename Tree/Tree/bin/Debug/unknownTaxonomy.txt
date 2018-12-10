@@ -1,0 +1,18 @@
+Red
+	Pomegranite
+Orange
+	Fruit
+Yellow
+	Petal
+Green
+	Leaf
+Blue
+	Iris
+Indigo
+	Orchid
+Violet
+	Flower
+		Mayonaise
+	Pickle
+	Lettuce
+Two All Beef Patties
