@@ -261,5 +261,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tree\Tree\Tree.csproj">
+      <Project>{c1e8ab83-14ee-4167-b505-a53d47fa1ae7}</Project>
+      <Name>Tree</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

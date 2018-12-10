@@ -28,3 +28,7 @@ C:\Users\musha\source\repos\TreeWebInterface\CRNTreeInterface\TreeWebInterface\o
 C:\Users\musha\source\repos\TreeWebInterface\CRNTreeInterface\TreeWebInterface\obj\Debug\netcoreapp2.1\TreeWebInterface.RazorTargetAssemblyInfo.cache
 C:\Users\musha\source\repos\TreeWebInterface\CRNTreeInterface\TreeWebInterface\obj\Debug\netcoreapp2.1\TreeWebInterface.dll
 C:\Users\musha\source\repos\TreeWebInterface\CRNTreeInterface\TreeWebInterface\obj\Debug\netcoreapp2.1\TreeWebInterface.pdb
+C:\Users\musha\source\repos\TreeWebInterface\CRNTreeInterface\TreeWebInterface\bin\Debug\netcoreapp2.1\Tree.exe
+C:\Users\musha\source\repos\TreeWebInterface\CRNTreeInterface\TreeWebInterface\bin\Debug\netcoreapp2.1\Tree.pdb
+C:\Users\musha\source\repos\TreeWebInterface\CRNTreeInterface\TreeWebInterface\bin\Debug\netcoreapp2.1\Tree.exe.config
+C:\Users\musha\source\repos\TreeWebInterface\CRNTreeInterface\TreeWebInterface\obj\Debug\netcoreapp2.1\TreeWebInterface.csproj.CopyComplete

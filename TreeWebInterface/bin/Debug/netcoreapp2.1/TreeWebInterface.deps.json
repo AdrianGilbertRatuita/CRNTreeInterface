@@ -28,7 +28,8 @@
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
           "Microsoft.Azure.SignalR": "1.0.2",
           "Microsoft.Azure.SignalR.Protocols": "1.0.2",
-          "Microsoft.NETCore.App": "2.1.0"
+          "Microsoft.NETCore.App": "2.1.0",
+          "Tree": "1.0.0"
         },
         "runtime": {
           "TreeWebInterface.dll": {}
@@ -444,6 +445,14 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
+        }
+      },
+      "Tree/1.0.0": {
+        "runtime": {
+          "Tree.exe": {}
+        },
+        "compile": {
+          "Tree.exe": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3400,6 +3409,11 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "Tree/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",
