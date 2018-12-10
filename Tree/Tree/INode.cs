@@ -9,6 +9,7 @@ namespace Tree
     public interface INode
     {
 
+        string CurrentTime;
         float Depth { get; set; }
         string Value { get; set; }
         string Identifier { get; }

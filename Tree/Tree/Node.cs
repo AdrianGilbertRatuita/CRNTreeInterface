@@ -9,6 +9,7 @@ namespace Tree
     public class Node : INode
     {
 
+        public string CurrentTime;
         public float Depth { get; set; }
         public string Value { get; set;}
         public string Identifier { get; private set; }
@@ -32,6 +33,7 @@ namespace Tree
             //
             ParentNode = null;
             NodeChildren = new List<INode>();
+            CurrentTime = DateTime.UtcNow.ToString();
 
         }
 
@@ -44,13 +46,13 @@ namespace Tree
                 Child.ParentNode.NodeChildren.Remove(Child);
 
             }
+
             Child.ParentNode = NewParent;
             NewParent.NodeChildren.Add(Child);
 
-
-
             UpdateChildrenDepth(Child, NewParent);
-
+            Child.CurrentTime = DateTime.UtcNow.ToString();
+            NewParent.CurrentTime = DateTime.UtcNow.ToString();
         }
 
         private static void UpdateChildrenDepth(INode Child, INode Parent)
