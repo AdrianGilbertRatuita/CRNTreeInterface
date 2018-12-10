@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Tree;
 
 namespace TreeWebInterface
 {
@@ -18,7 +19,7 @@ namespace TreeWebInterface
         public void Ping()
         {
 
-            Clients.All.SendAsync("Ping", Context.ConnectionId);
+            Clients.Others.SendAsync("Ping", Context.ConnectionId);
 
         }
 

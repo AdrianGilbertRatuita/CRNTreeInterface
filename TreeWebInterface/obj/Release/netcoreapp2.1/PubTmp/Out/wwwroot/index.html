@@ -21,6 +21,7 @@
         <div style="overflow: auto; border-style: ridge; border-top-style: hidden;">
             <button class="btn-warning pull-right" id="echo">Echo</button>
             <button class="btn-success pull-right" id="sendmessage">Send</button>
+            <button class="btn-success pull-right" id="ping">Ping</button>
         </div>
     </div>
     <div class="modal alert alert-danger fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -112,9 +113,21 @@
                     }
                 };
 
+                var ReturnPing = function (ID) {
+
+
+                    connection.send('ReturnPing', ID);
+                    var encodedName = "PING";
+                    var encodedMsg = "RETURN PING";
+                    var messageEntry = createMessageEntry(encodedName, encodedMsg);
+                    var messageBox = document.getElementById('messages');
+
+                }
+
                 // Create a function that the hub can call to broadcast messages.
                 connection.on('BroadcastMessage', messageCallback);
                 connection.on('SendTree', CreateOnlineTree);
+                connection.on('Ping', ReturnPing);
                 connection.on('Echo', messageCallback);
                 connection.onclose(onConnectionError);
             }
@@ -149,6 +162,16 @@
                     messageInput.focus();
                     event.preventDefault();
                 });
+                document.getElementById('ping').addEventListener('click', function (event) {
+                    // Call the echo method on the hub.
+                    connection.send('Ping');
+
+                    // Clear text box and reset focus for next comment.
+                    messageInput.value = '';
+                    messageInput.focus();
+                    event.preventDefault();
+                });
+
             }
 
             function onConnectionError(error) {
@@ -171,6 +194,7 @@
                 .catch(function (error) {
                     console.error(error.message);
                 });
+
         });</script>
 
 

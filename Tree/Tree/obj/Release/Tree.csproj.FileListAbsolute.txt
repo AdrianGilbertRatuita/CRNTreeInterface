@@ -1,0 +1,2 @@
+C:\Users\musha\source\repos\TreeWebInterface\CRNTreeInterface\Tree\Tree\obj\Release\Tree.csprojAssemblyReference.cache
+C:\Users\musha\source\repos\TreeWebInterface\CRNTreeInterface\Tree\Tree\obj\Release\Tree.csproj.CoreCompileInputs.cache

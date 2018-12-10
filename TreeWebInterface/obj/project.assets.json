@@ -4394,6 +4394,15 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "Tree/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Tree.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tree.dll": {}
+        }
       }
     }
   },
@@ -11616,6 +11625,11 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "Tree/1.0.0": {
+      "type": "project",
+      "path": "../Tree/Tree/Tree.csproj",
+      "msbuildProject": "../Tree/Tree/Tree.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -11624,7 +11638,8 @@
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.Azure.SignalR >= 1.0.2",
       "Microsoft.Azure.SignalR.Protocols >= 1.0.2",
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "Tree >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -11656,7 +11671,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\musha\\source\\repos\\TreeWebInterface\\CRNTreeInterface\\Tree\\Tree\\Tree.csproj": {
+              "projectPath": "C:\\Users\\musha\\source\\repos\\TreeWebInterface\\CRNTreeInterface\\Tree\\Tree\\Tree.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

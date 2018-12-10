@@ -12,4 +12,8 @@
     <PackageReference Include="Microsoft.Azure.SignalR.Protocols" Version="1.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Tree\Tree\Tree.csproj" />
+  </ItemGroup>
+
 </Project>

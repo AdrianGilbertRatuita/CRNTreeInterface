@@ -32,7 +32,7 @@ namespace TreeWPFInterface
 
             InitializeComponent();
 
-            CRNConnection = new HubConnectionBuilder().WithUrl("http://localhost:5000/chat").Build();
+            CRNConnection = new HubConnectionBuilder().WithUrl("https://montblanccrntreeinterface.azurewebsites.net/chat").Build();
 
             CRNConnection.Closed += async (error) =>
             {
@@ -216,6 +216,7 @@ namespace TreeWPFInterface
 
                 }
 
+                
                 await CRNConnection.InvokeAsync("SendTree", TreeListFinal.ToArray());
 
             }
