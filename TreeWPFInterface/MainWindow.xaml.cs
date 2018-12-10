@@ -108,7 +108,7 @@ namespace TreeWPFInterface
 
                     if (!alreadyExists)
                     {
-                        TreeList.Items.Insert(TreeList.SelectedIndex, AddingNode);
+                        TreeList.Items.Insert(TreeList.SelectedIndex + 1, AddingNode);
                     }
                 }
                 catch
