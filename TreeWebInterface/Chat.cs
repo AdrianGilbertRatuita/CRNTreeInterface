@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Tree;
 
 namespace TreeWebInterface
 {
@@ -23,10 +22,10 @@ namespace TreeWebInterface
 
         }
 
-        public void SendTree(Node RootNode)
+        public void SendTree(string[] Tree)
         {
 
-            Clients.All.SendAsync("SendTree", RootNode);
+            Clients.All.SendAsync("SendTree", Tree);
 
         }
 

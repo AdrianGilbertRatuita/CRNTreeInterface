@@ -13,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Tree;
 
 //
 using Microsoft.AspNetCore.SignalR.Client;
@@ -87,14 +86,14 @@ namespace TreeWPFInterface
                 
             }
 
-            CRNConnection.On<Node>("AddNode", (Node) =>
+            CRNConnection.On<string>("AddNode", (Node) =>
             {
 
                 TreeList.Items.Add(Node);
 
             });
 
-            CRNConnection.On<Node>("DeleteNode", (Node) =>
+            CRNConnection.On<string>("DeleteNode", (Node) =>
             {
 
                 TreeList.Items.Remove(Node);
@@ -112,10 +111,19 @@ namespace TreeWPFInterface
 
             });
 
-            CRNConnection.On<Node>("SendTree", (Tree) =>
+            CRNConnection.On<string[]>("SendTree", (Tree) =>
             {
+                this.Dispatcher.Invoke(() =>
+                {
+                    TreeList.Items.Clear();
+                    for (int i = 0; i < Tree.Length; i++)
+                    {
 
-                
+                        TreeList.Items.Add(Tree[i]);
+
+                    }
+
+                });
 
             });
 
