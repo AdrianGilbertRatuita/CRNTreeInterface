@@ -5,3 +5,7 @@ D:\COLUMBIA\Algorithms\Algorepo\Tree\TreeGraph\TreeGraph\obj\Debug\TreeGraph.csp
 D:\COLUMBIA\Algorithms\Algorepo\Tree\TreeGraph\TreeGraph\obj\Debug\TreeGraph.csproj.CoreCompileInputs.cache
 D:\COLUMBIA\Algorithms\Algorepo\Tree\TreeGraph\TreeGraph\obj\Debug\TreeGraph.exe
 D:\COLUMBIA\Algorithms\Algorepo\Tree\TreeGraph\TreeGraph\obj\Debug\TreeGraph.pdb
+C:\Users\musha\source\repos\TreeWebInterface\CRNTreeInterface\Tree\TreeGraph\TreeGraph\obj\Debug\TreeGraph.csprojAssemblyReference.cache
+C:\Users\musha\source\repos\TreeWebInterface\CRNTreeInterface\Tree\TreeGraph\TreeGraph\obj\Debug\TreeGraph.csproj.CoreCompileInputs.cache
+C:\Users\musha\source\repos\TreeWebInterface\CRNTreeInterface\Tree\TreeGraph\TreeGraph\obj\Debug\TreeGraph.exe
+C:\Users\musha\source\repos\TreeWebInterface\CRNTreeInterface\Tree\TreeGraph\TreeGraph\obj\Debug\TreeGraph.pdb
